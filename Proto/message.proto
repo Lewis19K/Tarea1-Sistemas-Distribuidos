@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package grpc;
+
+option go_package = "https://github.com/Sistemas-Distribuidos-2022-2/Tarea1-Grupo08/tree/main/Proto";
+
+message reqEnviarEscuadron{
+    int64 escuadron = 1;
+}
+
+message resEnviarEscuadron{
+}
+
+message resEstadoLab{
+    bool ready = 1;
+}
+
+message reqEstadoLab{
+}
+
+service MessageService {
+    rpc EnviarEscuadron (reqEnviarEscuadron) returns (resEnviarEscuadron);
+    rpc EnviarEscuadron2 (reqEnviarEscuadron) returns (resEnviarEscuadron);
+    rpc EnviarEscuadron3 (reqEnviarEscuadron) returns (resEnviarEscuadron);
+    rpc EnviarEscuadron4 (reqEnviarEscuadron) returns (resEnviarEscuadron);
+    rpc EstadoLab (reqEstadoLab) returns (resEstadoLab);
+    rpc EstadoLab2 (reqEstadoLab) returns (resEstadoLab);
+    rpc EstadoLab3 (reqEstadoLab) returns (resEstadoLab);
+    rpc EstadoLab4 (reqEstadoLab) returns (resEstadoLab);
+}
